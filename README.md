@@ -10,9 +10,13 @@ What things you need to install the software and how to install them.
 ### Step 1: Start docker + use container docker environment
 ```bash
 docker-compose up -d
-docker exec -it application bash
+docker exec -it application1 bash
 ```
 ### Step 2: Install require
 ```bash
 composer install
+```
+### Step 3: Create tables for database
+```bash
+bin/console doctrine:migrations:migrate
 ```
