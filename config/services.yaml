@@ -25,3 +25,7 @@ services:
     App\EventListener\UserDeactivateSubscriber:
         tags:
             - { name: kernel.event_subscriber, event: user.deactivate }
+
+    App\Command\UserCommand:
+        tags:
+            - { name: 'console.command', command: 'app:user-info' }
